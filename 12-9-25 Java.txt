@@ -1,0 +1,301 @@
+import java.util.Scanner;
+
+/**
+ *
+ * @author test10
+ */
+public class Fibonacci {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter n");
+        int n=sc.nextInt();
+        int first=0,second=1;
+        System.out.println("Fibonacci Seeries");
+        for(int i=1;i<=n;i++)
+        {
+            System.out.println(first+"");
+        int next=first+second;
+        first=second;
+        second=next;
+    }
+    }
+    
+}
+
+
+OUTPUT
+
+Enter n
+
+5
+Fibonacci Seeries
+0
+1
+1
+2
+3
+
+
+
+
+
+
+2//
+package amrutha;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author test10
+ */
+public class evenodd {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the value of n");
+                int n=sc.nextInt();
+                int evencount=0,oddcount=0;
+                for(int i=1;i<=n;i++)
+                {
+                    if(i%2==0)
+                    {
+                        evencount++;
+                    }
+                    else
+                    {
+                        oddcount++;
+                    }
+                }
+        // TODO code application logic here
+                System.out.println("count of even numbers"+evencount);
+                System.out.println("count of odd numbers"+oddcount);
+    }
+    
+}
+
+
+OUTPUT
+
+enter the value of n
+50
+count of even numbers25
+count of odd numbers25
+
+
+3//
+
+package amrutha;
+
+/**
+ *
+ * @author test10
+ */import java.util.Scanner;
+public class sumreverse {
+    
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a number");
+                int num=sc.nextInt();
+                int sum=0,reverse=0,temp=num;
+                while(temp>0)
+                {
+                    int digit=temp%10;
+                    sum+=digit;
+                    reverse=reverse*10+digit;
+                    temp/=10;
+                   
+                }
+        // TODO codSe application logic here
+                System.out.println("Sum of digits"+sum);
+                System.out.println("Reverse the number"+reverse);
+    }
+    
+}
+
+
+
+ OUTPUT
+ 
+ Enter a number
+12345
+Sum of digits15
+Reverse the number54321
+
+
+
+//
+
+
+package amrutha;
+
+/**
+ *
+ * @author test10
+ */import java.util.Scanner;
+public class primenum {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) 
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a number");
+        int num=sc.nextInt();
+        boolean isPrime=true;
+        if(num<=1)
+        {
+            isPrime=false;
+        }
+        else
+        {
+            for(int i=2;i<num/2;i++){
+                if(num%i==0)
+                {
+                    isPrime=false;
+                    break;
+                }
+        }
+        
+        // TODO code application logic here
+    }
+         if(isPrime)
+        {
+            System.out.println(num+"is a prime number");
+        }
+         else
+    {
+        System.out.println(num+"is not a prime number");
+        
+    }
+}
+}
+
+
+
+OUTPUT
+
+
+Enter a number
+5
+5is a prime number
+
+Enter a number
+6
+6is not a prime number
+
+
+//
+
+
+package amrutha;
+
+/**
+ *
+ * @author test10
+ */import java.util.Scanner;
+public class gcdlcm {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the first number");
+        int a=sc.nextInt();
+        System.out.println("Enter second number");
+        int b=sc.nextInt();
+        int gcd=1;
+        int x=a,y=b;
+        while(y!=0)
+        {
+            int temp=y;
+            y=x%y;
+            x=temp;
+            
+        }
+        // TODO code application logic here
+        gcd=x;
+    int lcm=(a*b)/gcd;
+    System.out.println("GCD of" + a +"and" + b +"=" + gcd );
+    System.out.println("LCM of" +a+"and" +b+"=" +lcm);
+    }
+    
+}
+
+
+OUTPUT
+
+Enter the first number
+66
+Enter second number
+126
+GCD of66and126=6
+LCM of66and126=1386
+
+
+
+// 
+
+
+package amrutha;
+
+/**
+ *
+ * @author test10
+ */import java.util.*;35
+public class arrmarks {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        float[] marks=new float[10];
+        int i;
+        float total=0,percent;
+        System.out.println("Enter 10 marks");
+        for(i=0;i<10;i++)
+            marks[i]=sc.nextFloat();
+        for(i=0;i<10;i++)
+            total+=marks[i];
+        percent=total/10;
+        System.out.println("Total="+total+"\n Average="+percent);
+        
+        // TODO code application logic here
+    }
+    
+}
+
+
+
+OUTPUT
+
+
+Enter 10 marks
+35
+46
+57
+65
+99
+86
+3
+100
+89
+10
+Total=590.0
+ Average=59.0
